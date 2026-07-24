@@ -5,6 +5,8 @@ The engine is intentionally simple: every scene, dialogue option, and ending is 
 
 The entire game can be rewritten without modifying the Python source code. Simply edit the JSON files to create completely new adventures.
 
+<img width="1920" height="1080" alt="TerminalRPGGif" src="https://github.com/user-attachments/assets/4fbcb4fa-7e3e-47d2-8e96-e580b49d5277" />
+
 ## Features
 * **Data-driven design**
   * No game logic is hardcoded into the story.
@@ -321,7 +323,7 @@ This project is released under the MIT License.
 Hey there, this is a small story from myself, Aryan Agarwal. 
 I made the RPG in an hour as a birthday present for my younger sister(she was delighted). You can see it under games/birthday_game
 
-Interstingly enough(I guess all the random stuff I work on made me a better programmer), the parser itself was super short: just 100 lines(became longer with additional features). Instead, I probably spent 45 minutes or so writing out the entire story and mentalizing how to parser the json instead of coding.
+Interestingly enough(I guess all the random stuff I work on made me a better programmer), the parser itself was super short: just 100 lines(became longer with additional features). Instead, I probably spent 45 minutes or so writing out the entire story and mentalizing how to parser the json instead of coding.
 
 The simplicity was really nice, and I was quite shocked at how many features it supported. With the addition of features such as title routes, I made a second terminal game which is longer and tries to push the limits of the system.
 
