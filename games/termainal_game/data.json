@@ -1,0 +1,311 @@
+{
+    "prompt": "ROOT://",
+    "question": "SYSTEM BOOT COMPLETE\nUnauthorized access will be logged.\n\nuser@ghost > ",
+    "answer": {
+        "help": {
+            "prompt": "help",
+            "question": "Known commands - help ls ps whoami login admin network diag history mail cron logs exit\nSome doors don't show up on this list.",
+            "answer": {
+                "man": {
+                    "prompt": "man",
+                    "question": "There is no manual page for the truth.\nBut there is a secret command hidden in every branch of this system.",
+                    "answer": {
+                        ".man": "You RTFM'd the RTFM.\nAwarded Title: RTFM",
+                        "*": "Nothing more to read here.\nAwarded Title: Read The Manual"
+                    }
+                },
+                "about": {
+                    "prompt": "about",
+                    "question": "A game about a game.\nIt doesn't have a manual. Try reading it anyway.",
+                    "answer": "Awarded Title: Read The Manual"
+                },
+                "Script Kiddie": {
+                    "prompt": "??? (only visible to the unworthy)",
+                    "question": "So you triggered the wildcard somewhere and came crawling back for real help.\nIf you're really one of them, you'd spell it their way.",
+                    "answer": {
+                        ".1337": "h4x0r status confirmed.\nAwarded Title: 1337 h4x0r",
+                        "*": "Nice try.\nAwarded Title: Read The Manual"
+                    }
+                },
+                "*": "Command not recognized. Try 'help'.\nAwarded Title: Read The Manual"
+            }
+        },
+        "ls": {
+            "prompt": "ls -la",
+            "question": "total 6\n-rw-r--r--  passwd\n-rw-r--r--  readme\ndrwx------  .git\n-rw-------  .bash_history\n\nType a filename.",
+            "answer": {
+                ".passwd": "Just hashes. Dead end.\nAwarded Title: Nosy",
+                ".readme": "'Admin panel needs USER creds first. Try login. -M'\nAwarded Title: Nosy",
+                ".git": "commit a1b2c3d - 'remove hardcoded password, for real this time'\nAwarded Title: Ghost Files",
+                ".bash_history": "hunter2\nhunter2\nno wait it's hunter3\nsudo rm -rf --no-preserve-root /\n(just kidding)\nAwarded Title: Time Traveler",
+                "*": "cat - file not found\nAwarded Title: Nosy",
+                "": "You stare at the empty prompt for a while.\nAwarded Title: Insomniac"
+            }
+        },
+        "ps": {
+            "prompt": "ps aux",
+            "question": "PID   CMD\n1     init\n42    dream_daemon\n1337  cryptominer\n9999  watchdog\n\nType a PID to inspect it, or a command if you know one.\nSome PIDs don't respond to please. Try telling them, not asking.",
+            "answer": {
+                "42": {
+                    "prompt": "42",
+                    "question": "dream_daemon is just idling.",
+                    "answer": "Awarded Title: Watching"
+                },
+                "9999": {
+                    "prompt": "9999",
+                    "question": "watchdog is watching you back.",
+                    "answer": "Awarded Title: Watching"
+                },
+                ".kill 1337": "cryptominer terminated. CPU fan sighs in relief.\nAwarded Title: Process Killer",
+                ".kill 1": "Nice try. init respawns immediately.\nAwarded Title: Overconfident",
+                "*": "No such process.\nAwarded Title: Paranoid"
+            }
+        },
+        "whoami": {
+            "prompt": "whoami",
+            "question": "Checking identity...\nYou are user, but the system isn't sure user is who it thinks.\nWho are you really?",
+            "answer": {
+                "the player": {
+                    "prompt": "the player",
+                    "question": "Bold claim. The system logs it anyway.",
+                    "answer": "Awarded Title: Main Character Energy"
+                },
+                "just a guest": {
+                    "prompt": "just a guest",
+                    "question": "Humble. Guests don't usually get this far.",
+                    "answer": "Awarded Title: Identity Crisis"
+                },
+                ".root": "You are getting ahead of yourself. Some claim to be root before they even have Sudo Access. Bold.\nAwarded Title: Overconfident",
+                "*": "The system doesn't recognize that answer either.\nAwarded Title: Identity Crisis"
+            }
+        },
+        "login": {
+            "prompt": "login",
+            "question": "user@ghost >  login\nPassword > ",
+            "answer": {
+                ".hunter2": "Login accepted. Someone really should change that.\nAwarded Title: User Access",
+                ".hunter3": "Wrong, but close. Someone's been reusing passwords.\nAwarded Title: Access Denied",
+                "*": "Login failed.\nAwarded Title: Access Denied"
+            }
+        },
+        "admin": {
+            "prompt": "admin",
+            "question": "ADMIN PANEL - RESTRICTED",
+            "answer": {
+                "User Access": {
+                    "prompt": "escalate",
+                    "question": "Credentials verified. Escalating privileges.",
+                    "answer": "Awarded Title: Sudo Access"
+                },
+                "*": "ACCESS DENIED - insufficient privileges.\nAwarded Title: Access Denied"
+            }
+        },
+        "network": {
+            "prompt": "network",
+            "question": "Scanning local subnet...\n192.168.1.1   router\n192.168.1.42  unknown-host\n192.168.1.99  honeypot (probably)\n\nType a host to connect, or a tool name if you know one.",
+            "answer": {
+                "192.168.1.1": {
+                    "prompt": "router",
+                    "question": "Just a router. Boring.",
+                    "answer": "Awarded Title: Port Scanner"
+                },
+                "192.168.1.99": {
+                    "prompt": "honeypot",
+                    "question": "Alarms blare. A countdown starts.\n5... 4... 3...\nYour fingers already know how to abort a hung terminal.",
+                    "answer": {
+                        ".ctrl-c": "You disconnect just in time.\nAwarded Title: Slipped Away",
+                        "*": "Too slow. Connection traced.\nAwarded Title: Caught"
+                    }
+                },
+                ".nmap": "22/tcp open ssh\n80/tcp open http\n31337/tcp open elite\nAwarded Title: Port Scanner",
+                ".wireshark": "Packets captured. Someone really shouldn't send passwords in plaintext.\nAwarded Title: Man In The Middle",
+                "Sudo Access": {
+                    "prompt": "192.168.1.42",
+                    "question": "unknown-host lets you in without asking twice.",
+                    "answer": {
+                        ".exploit": {
+                            "prompt": "exploit",
+                            "question": "Kernel module staged. Deploy it?",
+                            "answer": {
+                                "deploy": "Kernel module loaded. You are root now.\nAwarded Title: Root Access",
+                                ".Root Access": "You already own this box. Might as well leave something behind.\nAwarded Title: Rootkit Installed",
+                                "*": "You hesitate. The window closes.\nAwarded Title: Firewall Breached"
+                            }
+                        },
+                        "*": "Connection idles. Try something specific.\nAwarded Title: Firewall Breached"
+                    }
+                },
+                "*": "Host unreachable.\nAwarded Title: Firewall Breached"
+            }
+        },
+        "diag": {
+            "prompt": "diag",
+            "question": "Running diagnostics...\nCPU  87 percent\nMEM  61 percent\nDISK 94 percent\n\nCheck a component.",
+            "answer": {
+                "cpu": {
+                    "prompt": "cpu",
+                    "question": "Someone's been mining crypto on this box.\nKill the process, or let it ride?",
+                    "answer": {
+                        "kill it": {
+                            "prompt": "kill it",
+                            "question": "CPU usage drops instantly.",
+                            "answer": "Awarded Title: Force Killed"
+                        },
+                        "let it ride": {
+                            "prompt": "let it ride",
+                            "question": "Fans scream but hey, free heat.",
+                            "answer": "Awarded Title: Overclocked"
+                        },
+                        "*": "You freeze up and do nothing.\nAwarded Title: Left Alone"
+                    }
+                },
+                "mem": {
+                    "prompt": "mem",
+                    "question": "Memory leak somewhere. Probably this game.\nRestart the process, or just add more swap?",
+                    "answer": {
+                        "restart": {
+                            "prompt": "restart",
+                            "question": "Clean slate. For now.",
+                            "answer": "Awarded Title: Force Killed"
+                        },
+                        "swap": {
+                            "prompt": "swap",
+                            "question": "A temporary fix becomes a permanent one.",
+                            "answer": "Awarded Title: Thermal Throttled"
+                        },
+                        "*": "You freeze up and do nothing.\nAwarded Title: Left Alone"
+                    }
+                },
+                "disk": {
+                    "prompt": "disk",
+                    "question": "94 percent full of secrets.\nDelete something, or ignore it?",
+                    "answer": {
+                        "delete": {
+                            "prompt": "delete",
+                            "question": "Space reclaimed. Among the junk, one file lingers: 'hunter2_backup_final_v2.bak'. You leave it alone. Someone should really rename their backups before they log in anywhere.",
+                            "answer": "Awarded Title: Purged"
+                        },
+                        "ignore": {
+                            "prompt": "ignore",
+                            "question": "Future you's problem now.",
+                            "answer": "Awarded Title: Disk Almost Full"
+                        },
+                        "*": "You freeze up and do nothing.\nAwarded Title: Left Alone"
+                    }
+                },
+                ".game_complete": "You found a function named after this exact moment.\nAwarded Title: Meta Awareness",
+                "*": "Diagnostics inconclusive.\nAwarded Title: Overclocked"
+            }
+        },
+        "history": {
+            "prompt": "history",
+            "question": "1  ls\n2  login\n3  sudo su\n4  rm -rf /tmp/*\n5  ????\n\nType a line number, or retype a command you remember.",
+            "answer": {
+                "5": {
+                    "prompt": "5",
+                    "question": "Line 5 is corrupted. Some things weren't meant to be logged.",
+                    "answer": "Awarded Title: Deja Vu"
+                },
+                ".sudo su": "Permission denied, but at least you tried the classics.\nAwarded Title: Recon",
+                "User Access": {
+                    "prompt": "grep -i secret ~/.bash_history",
+                    "question": "Now that you're logged in, the history file makes a lot more sense.",
+                    "answer": "Awarded Title: Deja Vu"
+                },
+                "*": "history - command not found in this shell.\nAwarded Title: Deja Vu"
+            }
+        },
+        "mail": {
+            "prompt": "mail",
+            "question": "Inbox (3 unread)\n1  From sysadmin - Password Policy Reminder\n2  From unknown - You Won a Prize!!!\n3  From sysadmin - Network Notes\n\nType a number to read it.",
+            "answer": {
+                "1": {
+                    "prompt": "Password Policy Reminder",
+                    "question": "Subject: Please rotate your password.\nBody: I know 'hunter2' is easy to remember but it's been the default for years now. Change it. Please.\n- sysadmin",
+                    "answer": "Awarded Title: Inbox Zero"
+                },
+                "2": {
+                    "prompt": "You Won a Prize!!!",
+                    "question": "Subject: CONGRATULATIONS\nBody: Click here to claim your prize.\n\nThere is no link. There is only a bad decision waiting to happen.",
+                    "answer": {
+                        ".click here": "Nothing happens. The email was lying, obviously.\nAwarded Title: Phished",
+                        "*": "You close the email, unclicked.\nAwarded Title: Inbox Zero"
+                    }
+                },
+                "3": {
+                    "prompt": "Network Notes",
+                    "question": "Subject: notes to self\nBody: unknown-host at 192.168.1.42 still has that exploit staged. nmap and wireshark both still work if anyone needs them.\n- sysadmin",
+                    "answer": "Awarded Title: Inbox Zero"
+                },
+                "*": "No mail matches that.\nAwarded Title: Inbox Zero"
+            }
+        },
+        "cron": {
+            "prompt": "cron",
+            "question": "crontab -l\n0 3 * * *   backup.sh\n0 4 * * *   game_complete_check.sh\n0 5 * * *   permissions_audit.sh\n* * * * *   watchdog.sh\n\nType a job name to inspect it.",
+            "answer": {
+                "backup.sh": {
+                    "prompt": "backup.sh",
+                    "question": "Just backs up passwd and readme. Nothing new here.",
+                    "answer": "Awarded Title: Cron Job"
+                },
+                "game_complete_check.sh": {
+                    "prompt": "game_complete_check.sh",
+                    "question": "Runs a function every night to check whether you're actually done. Someone named the job after something real.",
+                    "answer": "Awarded Title: Cron Job"
+                },
+                "permissions_audit.sh": {
+                    "prompt": "permissions_audit.sh",
+                    "question": "Every option you don't see was hidden by something.\nEvery title you earn was awarded by something.\nBoth somethings have names, and neither name is a secret. They're just not written here.",
+                    "answer": "Awarded Title: Close Reading"
+                },
+                "watchdog.sh": {
+                    "prompt": "watchdog.sh",
+                    "question": "Same watchdog from ps. It never sleeps.",
+                    "answer": "Awarded Title: Cron Job"
+                },
+                "*": "No such job.\nAwarded Title: Cron Job"
+            }
+        },
+        "logs": {
+            "prompt": "logs",
+            "question": "tail -n 50 /var/log/syslog\n[03:14] watchdog started\n[03:15] unknown-host handshake accepted\n[03:16] kernel module staged on 192.168.1.42\n[04:02] login attempt failed\n[04:03] login attempt succeeded\n\nType a timestamp to expand that entry.",
+            "answer": {
+                "03:14": {
+                    "prompt": "03:14",
+                    "question": "watchdog.sh, right on schedule.",
+                    "answer": "Awarded Title: Log Reader"
+                },
+                "03:16": {
+                    "prompt": "03:16",
+                    "question": "Someone already staged that exploit once before. Deploying it again wouldn't hurt.",
+                    "answer": "Awarded Title: Log Reader"
+                },
+                "04:03": {
+                    "prompt": "04:03",
+                    "question": "Someone logged in successfully around here. The password field was truncated in the log, but it started with 'hun'.",
+                    "answer": "Awarded Title: Log Reader"
+                },
+                "*": "No entry at that time.\nAwarded Title: Log Reader"
+            }
+        },
+        "exit": "Connection closed.\nAwarded Title: Logged Off",
+        "": "...\n(you said nothing, and something logged it anyway)\nAwarded Title: Ghost In The Machine",
+        "*": "bash - command not found\nAwarded Title: Script Kiddie",
+        ".Root Access": {
+            "prompt": "kernel",
+            "question": "The kernel has been listening the whole time.\nName the function that decides what you are allowed to see.",
+            "answer": {
+                ".is_hidden_option": {
+                    "prompt": "is_hidden_option",
+                    "question": "Correct. One more. Name the function that hands out titles.",
+                    "answer": {
+                        ".awardTitle": "The kernel opens all the way.\nAwarded Title: God Mode",
+                        "*": "Close, but the kernel isn't convinced yet."
+                    }
+                },
+                "*": "The kernel says nothing. Try again next time."
+            }
+        }
+    }
+}

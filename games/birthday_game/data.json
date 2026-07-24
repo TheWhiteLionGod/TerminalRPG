@@ -1,0 +1,203 @@
+{
+    "prompt": "Game Start.\nYou log onto the terminal game, but something feels wrong. You look around. Somehow, it looks exactly like real life.",
+    "question": "Where do you want to go?",
+    "answer": {
+        "1": {
+            "prompt": "To The Shelf",
+            "question": "You walk over and find a $50 gift card. What a find!",
+            "answer": {
+                "1": {
+                    "prompt": "Steal it",
+                    "question": "Mine now.",
+                    "answer": {
+                        "": "Awarded Title: Robberer",
+                        ".25": "I'll leave half for my brother.\nAwarded Title: Kind-Hearted Soul"
+                    }
+                },
+                "2": {
+                    "prompt": "Leave it alone",
+                    "question": "He should keep it safe",
+                    "answer": "Awarded Title: Did Nothing"
+                },
+                "Christmas Came Early": {
+                    "prompt": "Give your $50 dollar gift card to your brother",
+                    "question": "I'm sure he'll be happy.",
+                    "answer": "Awarded Title: Happy Happy Happy"
+                }
+            }
+        },
+        "2": {
+            "prompt": "The Pencil Sharpener",
+            "question": "Oh, a perfectly good pencil just sitting there.",
+            "answer": {
+                "1": {
+                    "prompt": "Steal it",
+                    "question": "Nice. You needed a pencil for your test.\nIt's the next day, you have a math test. What is 2 to the power of 5?",
+                    "answer": {
+                        "1": {
+                            "prompt": "32",
+                            "question": "Correct! You sure couldn't have done it without the pencil!",
+                            "answer": "Awarded Title: Hand Calculator"
+                        },
+                        "2": {
+                            "prompt": "What Test?",
+                            "question": "You've woken up to reality. Thank god it's still summer break.",
+                            "answer": "Awarded Title: 40 Days Of Peace"
+                        },
+                        ".2^5": "What!? I didn't expect that one. I mean, you're right.\nAwarded Title: Genius",
+                        ".Genius": "The question appears again.\nExcept this time, the answer is already written.\nI'm impressed that you remembered.\nAwarded Title: Memory Master",
+                        "*": "There's always next time.\nAwarded Title: You'll Get'em Next Time"
+                    }
+                },
+                "2": {
+                    "prompt": "Leave it alone",
+                    "question": "I'm sure my brother needs the pencil anyways",
+                    "answer": "Awarded Title: Did Nothing"
+                }
+            }
+        },
+        "3": {
+            "prompt": "To The Computer",
+            "question": "Bet, time to play some games.",
+            "answer": {
+                "1": {
+                    "prompt": "Play Roblox",
+                    "question": "Alright, but what game?",
+                    "answer": {
+                        "1": {
+                            "prompt": "Demonology",
+                            "question": "Perfect, Samar is online too",
+                            "answer": "Awarded Title: Demon Duo"
+                        },
+                        "2": {
+                            "prompt": "Piggy Intercity",
+                            "question": "I'm sure my brother will be overjoyed!",
+                            "answer": "Awarded Title: Happy Brother"
+                        },
+                        "3": {
+                            "prompt": "Rivals",
+                            "question": "Time to queue some solo. Oh wait, Samar is online.",
+                            "answer": {
+                                "1": {
+                                    "prompt": "Queue Solos",
+                                    "question": "It's fine",
+                                    "answer": "Awarded Title: Solo Leveling"
+                                },
+                                "2": {
+                                    "prompt": "Queue Duos",
+                                    "question": "We're going to dominate over those mobile players.",
+                                    "answer": "Awarded Title: Aimbot"
+                                },
+                                ".Demonology": "I guess I'll join Samar instead.\nAwarded Title: There's a Demon In My Server"
+                            }
+                        },
+                        "4": {
+                            "prompt": "Bee Swarm Simulator",
+                            "question": "It's about time you got 35 bees",
+                            "answer": "Awarded Title: Honeymaster"
+                        },
+                        "": "Oh, she's gone..\nAwarded Title: AFK",
+                        ".AFK": "You return to the computer after waiting.\nThe game is still open.\nYour character has been standing in the same place the entire time.\nSomehow, you gained progress anyway.\nAwarded Title: Professional Waiter"
+                    }
+                },
+                "2": {
+                    "prompt": "Play Valorant",
+                    "question": "I'm going to destroy my brother's rank",
+                    "answer": "Awarded Title: Evil Pear"
+                },
+                "3": {
+                    "prompt": "Play UCN",
+                    "question": "Wait... how do you even play this again?",
+                    "answer": {
+                        "1": {
+                            "prompt": "Ask brother",
+                            "question": "Can't wait to start grinding runs",
+                            "answer": "Awarded Title: Personal Best Run"
+                        },
+                        "2": {
+                            "prompt": "Quit",
+                            "question": "Oh well, I'll learn some other time.",
+                            "answer": "Awarded Title: Not A Sweat"
+                        },
+                        ".Youtube": "Awarded Title: Youtube Searcher"
+                    }
+                }
+            }
+        },
+        "4": {
+            "prompt": "To The Door",
+            "question": "Knock knock",
+            "answer": {
+                "1": {
+                    "prompt": "Who's there?",
+                    "question": "Santa",
+                    "answer": {
+                        "1": {
+                            "prompt": "Santa Who?",
+                            "question": "Santa Claus, silly!\nWould you like a $50 gift card as a present?",
+                            "answer": {
+                                "1": {
+                                    "prompt": "No",
+                                    "question": "Alright then, stay good.",
+                                    "answer": "Awarded Title: No Present Till Christmas"
+                                },
+                                "2": {
+                                    "prompt": "Yes",
+                                    "question": "Alright, it's all yours",
+                                    "answer": "Awarded Title: Christmas Came Early"
+                                }
+                            }
+                        },
+                        "2": {
+                            "prompt": "Santa isn't real",
+                            "question": "What?",
+                            "answer": {
+                                ".Let Me Out": "Awarded Title: Freedom",
+                                "*": "Awarded Title: Dream's Crushed"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "5": {
+            "prompt": "To The Bed",
+            "question": "You're at the bed. What would you like to do?",
+            "answer": {
+                "1": {
+                    "prompt": "Annoy Your Brother",
+                    "question": "Alright, what should you do?",
+                    "answer": {
+                        "1": {
+                            "prompt": "Jump On His Bed",
+                            "question": "You've annoyed him for today",
+                            "answer": "Awarded Title: Annoyance"
+                        },
+                        "2": {
+                            "prompt": "Take Springroll",
+                            "question": "Your brother woke up! What will you do?",
+                            "answer": {
+                                "1": {
+                                    "prompt": "Give Back Springroll",
+                                    "question": "Your brother is annoyed. But at least that's all he is.",
+                                    "answer": "Awarded Title: Annoyance"
+                                },
+                                "2": {
+                                    "prompt": "Run Away",
+                                    "question": "You've successfully escaped!",
+                                    "answer": "Awarded Title: My Springrolls"
+                                },
+                                ".Attack": "Awarded Title: Rivalry"
+                            }
+                        },
+                        "3": {
+                            "prompt": "Take His Phone",
+                            "question": "He doesn't notice.",
+                            "answer": "Awarded Title: Chocolate Bar"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
