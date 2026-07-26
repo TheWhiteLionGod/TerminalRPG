@@ -36,7 +36,7 @@ class SaveData(TypedDict):
 
 def load_game_data() -> GameData:
     with open(DATA_FILE, "r") as file:
-        return process_json_data(dict(json.load(file)))
+        return process_json_data(json.load(file))
 
 def load_save_data() -> SaveData:
     with open(SAVE_FILE, "r") as file:
@@ -46,7 +46,7 @@ def save_data_to_file(save_data: SaveData) -> None:
     with open(SAVE_FILE, "w") as file:
         json.dump(save_data, file, indent=4)
 
-def stringToGameData(answer_string: str) -> GameData:
+def string_to_game_data(answer_string: str) -> GameData:
     return GameData(prompt="", question="", answer=answer_string)
 
 def process_json_data(data: dict[str, Any]) -> GameData:
@@ -54,13 +54,15 @@ def process_json_data(data: dict[str, Any]) -> GameData:
         return GameData(**data)
 
     for option, answer in data["answer"].items():
-        data["answer"][option] = stringToGameData(answer) if isinstance(answer, str) else process_json_data(answer)
+        data["answer"][option] = string_to_game_data(answer) \
+            if isinstance(answer, str) \
+            else process_json_data(answer)
     return GameData(**data)
 
-def game_complete(save_data: SaveData) -> bool:
+def is_game_complete(save_data: SaveData) -> bool:
     return Counter(save_data["all"]) == Counter(save_data["obtained"])
 
-def awardTitle(title: str, save_data: SaveData) -> None:
+def award_title(title: str, save_data: SaveData) -> None:
     title = title.strip()
     if title not in save_data["obtained"]:
         save_data["obtained"].append(title)
@@ -70,7 +72,7 @@ def end_game_if_end(game_data: GameData, save_data: SaveData) -> bool:
         return False
 
     if "Awarded Title" in game_data["answer"]:
-        awardTitle(game_data["answer"].rsplit(":", 1)[1], save_data)
+        award_title(game_data["answer"].rsplit(":", 1)[1], save_data)
     return True
 
 def is_not_unlocked_route(option: str, save_data: SaveData) -> bool:
@@ -87,8 +89,8 @@ def is_hidden_option(option: str, save_data: SaveData) -> bool:
 def run_game(game_data: GameData, save_data: SaveData) -> None:
     while True:
         print("-------------")
-        print(game_data["prompt"])
-        print(game_data["question"])
+        print(game_data["prompt"]) if game_data["prompt"] else None
+        print(game_data["question"]) if game_data["question"] else None
 
         if end_game_if_end(game_data, save_data):
             print(game_data["answer"])
@@ -121,14 +123,13 @@ def run_game(game_data: GameData, save_data: SaveData) -> None:
 
         if DEBUG:
             raise Exception(f"Failed to read input.\nInput: {response}\nGame Data: {game_data}")
-        else:
-            print("Invalid Input!")
+        print("Invalid Input!")
 
 def main():
     game_data: GameData = load_game_data()
     save_data: SaveData = load_save_data()
 
-    if game_complete(save_data):
+    if is_game_complete(save_data):
         print("Game Completed!")
         return
 
