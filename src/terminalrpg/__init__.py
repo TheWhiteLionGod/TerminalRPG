@@ -137,6 +137,3 @@ def main():
         run_game(game_data, save_data)
     finally:
         save_data_to_file(save_data)
-
-if __name__ == "__main__":
-    main()
