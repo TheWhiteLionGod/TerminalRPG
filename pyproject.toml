@@ -1,9 +1,19 @@
 [project]
 name = "terminalrpg"
 version = "0.1.0"
-description = "Add your description here"
+description = "A lightweight, data-driven terminal rpg engine written in Python that parses JSON into complex dialogue options and interactions."
 readme = "README.md"
+authors = [
+    { name = "TheWhiteLionGod", email = "aaryan12jul@gmail.com" }
+]
 requires-python = ">=3.12"
 dependencies = [
     "dotenv>=0.9.9",
 ]
+
+[project.scripts]
+terminalrpg = "terminalrpg:main"
+
+[build-system]
+requires = ["uv_build>=0.11.23,<0.12.0"]
+build-backend = "uv_build"
